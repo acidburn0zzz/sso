@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">          
+          /**
+          * !!ReMIND LINK SETTINGS  !!
+          * !!Change url to your site url.!!!.
+          **/
+          var settings = {
+            site: {
+              name: 'your site name here',
+              url: 'http://yoursite.ReMIND-LINL.net/'
+            }
+          };
+        </script>
+<style type="text/css">
+.mt-button,#mt-site-selector{background:#f2f2f2;border:1px solid #bbb;cursor:pointer;display:inline-block;text-align:center;height:40px;width:29%;margin:0;padding:2px;}.mt-button:hover{background:#4db6ef;border:1px solid #00679e;color:#fff;}.mt-button:active{background:#666;border:1px solid #333;color:#fff;margin:1px 0 0 1px;}label{margin-bottom:0;font:18px/1.5 Arial, Helvetica, sans-serif;color:#555;}input{width:64%;height:40px;margin-right:4%;}body{font-size:80%;font-family:'Lucida Grande', Verdana, Arial, Sans-Serif;}.error-msg{background:linear-gradient(tobottom,#fcebeb0%,#f2d7d7100%);border:1px solid #c8958e;font-weight:700;}.input-error-msg{border:1px solid #c8958e;}
+</style>
+</head>
+<body>
+    <label>View customer history</label><br/>   
+    <input type="text" id="mt-user-history-input" placeholder="Enter customer acticvity id"/>
+    <button class="mt-button" id="mt-user-history-button">View</button><br/><br/>  
+    <label class="mt-mashup">Find articles</label><br/>       
+    <input type="text" name="" id="mt-solution-finder-input" placeholder="Enter your query here"/>
+    <button class="mt-button" id="mt-solution-finder-button">Search</button><br/><br/>          
+    <button class="mt-button" id="mt-article-creation">Submit request for new article</button><br/><br/>
+    <div id="mt-info-message"></div> 
+</body>
+<tail>
+<script type="text/javascript">
+    var sapApplication={siteUrl:window.settings.site.url,ticketId:"",ticketSubject:"",brand:"",product:"",submittedBy:"",init:function(e){if(!e){e={}}this.ticketSubject=e.TicketDescription;this.ticketId=e.TicketID;this.brand=e.ProductCategoryName;this.product=e.ProductName;this.email=e.UserEmail;var t=document.getElementById("mt-solution-finder-button");var n=document.getElementById("mt-user-history-button");var r=document.getElementById("mt-article-creation");document.getElementById("mt-solution-finder-input").value=this.ticketSubject;if(t.addEventListener){t.addEventListener("click",this.showHelp,false);n.addEventListener("click",this.showHistory,false);r.addEventListener("click",this.requestArticleCreation,false)}else{t.attachEvent("onclick",this.showHelp);n.attachEvent("onclick",this.showHistory);r.attachEvent("onclick",this.requestArticleCreation)}},showHelp:function(e){var t=sapApplication;var n=t.siteUrl;var r=document.getElementById("mt-solution-finder-input");t.removeErrorMessage(r);if(r.value===""){t.showErrorMessage(r)}else{window.open(n+"/Help/Search?query="+encodeURI(r.value))}},showHistory:function(e){var t=sapApplication;var n=t.siteUrl;var r=document.getElementById("mt-user-history-input");t.removeErrorMessage(r);if(r.value===""){t.showErrorMessage(r)}else{window.open(n+"/Special:SupportAgentReports?token="+encodeURI(r.value))}},requestArticleCreation:function(e){var t=sapApplication;var n=t.siteUrl;var r=document.getElementById("mt-user-history-input");window.open(n+"/Help/Request_Article?ticketid="+encodeURI(t.ticketId)+"&ticketsubject="+encodeURI(t.ticketSubject)+"&brand="+encodeURI(t.brand)+"&product="+encodeURI(t.product)+"&email="+encodeURI(t.email))},showErrorMessage:function(e){var t=document.getElementById("mt-info-message");e.className=e.className+" input-error-msg";t.innerHTML='<div class="error-msg">Please complete highlighted field</div>'},removeErrorMessage:function(e){e.className="";errorMessageDiv=document.getElementById("mt-info-message");errorMessageDiv.innerHTML=""}}
+    sap.byd.ui.mashup.onContextUpdate = function() { var context = sap.byd.ui.mashup.context; sapApplication.init(context.inport); };
+</script> 
+</tail>
+</html>
