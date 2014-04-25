@@ -1,0 +1,195 @@
+<WMT_MS_Capabilities version="1.1.0" updateSequence="20131019">
+<script/>
+<Service>
+<Name>OGC:WMS</Name>
+<!-- Human-readable title for pick lists -->
+<Title>NGA GeoNames Scaled WMS Server</Title>
+<!--
+Narrative description providing additional information
+-->
+<Abstract/>
+<KeywordList>
+<Keyword>NGA</Keyword>
+<Keyword>WMS</Keyword>
+<Keyword>GeoNames</Keyword>
+</KeywordList>
+<!-- Top-level address of service or service provider -->
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.intergraph.com" xlink:type="simple"/>
+<ContactInformation>
+<ContactPersonPrimary>
+<ContactPerson>GeoNames Support</ContactPerson>
+<ContactOrganization>NGA</ContactOrganization>
+</ContactPersonPrimary>
+<ContactPosition/>
+<ContactAddress>
+<AddressType/>
+<Address/>
+<City/>
+<StateOrProvince/>
+<PostCode/>
+<Country/>
+</ContactAddress>
+<ContactVoiceTelephone>Commercial 571-557-5959 DSN 547-5959</ContactVoiceTelephone>
+<ContactElectronicMailAddress>geonames@nga.mil</ContactElectronicMailAddress>
+</ContactInformation>
+<Fees>none</Fees>
+<AccessConstraints>none</AccessConstraints>
+</Service>
+<Capability>
+<Request>
+<GetCapabilities>
+<Format>application/vnd.ogc.wms_xml</Format>
+<DCPType>
+<HTTP>
+<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/request.asp" xlink:type="simple"/>
+</Get>
+</HTTP>
+</DCPType>
+</GetCapabilities>
+<GetMap>
+<Format>image/png</Format>
+<Format>image/jpeg</Format>
+<Format>image/svgx</Format>
+<Format>image/svg</Format>
+<DCPType>
+<HTTP>
+<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/request.asp" xlink:type="simple"/>
+</Get>
+</HTTP>
+</DCPType>
+</GetMap>
+<GetFeatureInfo>
+<Format>text/html</Format>
+<DCPType>
+<HTTP>
+<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/request.asp" xlink:type="simple"/>
+</Get>
+</HTTP>
+</DCPType>
+</GetFeatureInfo>
+</Request>
+<Exception>
+<Format>application/vnd.ogc.se_inimage</Format>
+<Format>application/vnd.ogc.se_xml</Format>
+</Exception>
+<Layer>
+<Title>GeoNames Scaled Layers</Title>
+<SRS>EPSG:4326</SRS>
+<LatLonBoundingBox minx="-180" miny="-90" maxx="180" maxy="90"/>
+<!--
+BoundingBox is inheritable, we define at root, inherited by all
+-->
+<BoundingBox SRS="EPSG:4326" minx="-180" miny="-90" maxx="180" maxy="90"/>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 1000000 to 7000000_P</Name>
+<Title>- 1000000 to 7000000_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 1000000 to 7000000_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 626000 to 999999_P</Name>
+<Title>- 626000 to 999999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 626000 to 999999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 426000 to 625999_P</Name>
+<Title>- 426000 to 625999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 426000 to 625999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 326000 to 425999_P</Name>
+<Title>- 326000 to 425999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 326000 to 425999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 226000 to 325999_P</Name>
+<Title>- 226000 to 325999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 226000 to 325999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 151000 to 225999_P</Name>
+<Title>- 151000 to 225999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 151000 to 225999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 68000 to 150999_P</Name>
+<Title>- 68000 to 150999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 68000 to 150999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 26000 to 67999_P</Name>
+<Title>- 26000 to 67999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 26000 to 67999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="0" noSubsets="0">
+<Name>- 1 to 25999_P</Name>
+<Title>- 1 to 25999_P</Title>
+<Style>
+<Name>Default</Name>
+<Title>Default</Title>
+<LegendURL width="20" height="15">
+<Format>image/png</Format>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://geonames.nga.mil/namesscaled/Legends/- 1 to 25999_P_Default.png" xlink:type="simple"/>
+</LegendURL>
+</Style>
+</Layer>
+</Layer>
+</Capability>
