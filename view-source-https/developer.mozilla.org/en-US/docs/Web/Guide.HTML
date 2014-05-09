@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="redesign no-js">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+          <script src="//cdn.optimizely.com/js/237572123.js"></script>
+  
+    <title>Web developer guide | MDN</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="home" href="/en-US/">
+  <link rel="copyright" href="#copyright">
+
+  <link rel="stylesheet" href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css">
+              <link rel="stylesheet" media="all" href="https://developer.cdn.mozilla.net/media/css/mdn-min.css?build=c4298c7" />
+      
+    <link rel="stylesheet" media="all" href="https://developer.cdn.mozilla.net/media/css/wiki-min.css?build=c4298c7" />
+
+          <link rel="stylesheet" type="text/css"
+            href="/en-US/docs/Template:CustomCSS?raw=1" />
+    
+    
+  <!-- common social tags -->
+    <meta property="og:type" content="website">
+  <meta property="og:image" content="https://developer.mozilla.org/media/redesign/img/opengraph-logo.png">
+  <meta property="og:site_name" content="Mozilla Developer Network">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://developer.mozilla.org/media/redesign/img/opengraph-logo.png">
+  <meta name="twitter:site" content="@NewOnMDN">
+  <meta name="twitter:creator" content="@NewOnMDN">
+
+  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/media/redesign/img/favicon144.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/media/redesign/img/favicon114.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/media/redesign/img/favicon72.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/media/redesign/img/favicon57.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/media/redesign/img/favicon32.png">
+
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script src="https://developer.cdn.mozilla.net/media/js/libs/html5.js"></script>
+  <![endif]-->
+
+    <link rel="alternate" type="application/json" href="/en-US/docs/Web/Guide$json">
+  <link rel="canonical" href="https://developer.mozilla.org/en-US/docs/Web/Guide" >
+
+            <link rel="alternate" hreflang="ar" href="/ar/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="bn-BD" href="/bn-BD/docs/Web/Guide" title="ওয়েব ডেভেলপার গাইড">
+          <link rel="alternate" hreflang="de" href="/de/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="es" href="/es/docs/Web/Guide" title="Guía de Desarrollo Web">
+          <link rel="alternate" hreflang="fa" href="/fa/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="fr" href="/fr/docs/Web/Guide" title="Guides pour Développeurs Web">
+          <link rel="alternate" hreflang="id" href="/id/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="it" href="/it/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="ja" href="/ja/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="ko" href="/ko/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="pl" href="/pl/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="pt-BR" href="/pt-BR/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="ro" href="/ro/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="ru" href="/ru/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="th" href="/th/docs/Web/Guide" title="Web developer guide">
+          <link rel="alternate" hreflang="zh-CN" href="/zh-CN/docs/Web/Guide" title="Web 开发者指南">
+          <link rel="alternate" hreflang="zh-TW" href="/zh-TW/docs/Web/Guide" title="Web developer guide">
+      
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Web developer guide">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide">
+  <meta name="twitter:title" content="Web developer guide">
+    <meta property="og:description" content="These articles provide how-to information to help you make use of specific technologies and APIs.">
+  <meta name="description" content="These articles provide how-to information to help you make use of specific technologies and APIs.">
+  <meta name="twitter:description" content="These articles provide how-to information to help you make use of specific technologies and APIs.">
+  
+      <script type="text/javascript">
+  // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+  var removeUtms  =   function(){
+      var location = window.location;
+      if (location.hash.indexOf('utm') != -1) {
+          var anchor = location.hash.match(/#(?!utm)[^&]+/);
+          anchor  =   anchor ? anchor[0] : '';
+          if(!anchor && window.history.replaceState){
+              history.replaceState({}, '', location.pathname + location.search);
+          } else {
+              location.hash = anchor;
+          }
+      }
+  };
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36116321-5'],
+            ['_setAllowAnchor', true],
+            ['_setCustomVar', 7, 'Signed-In', 'Yes', 1],
+            ['_setCustomVar', 8, 'docs navigator', 'Yes', 1],
+            ['_trackPageview']);
+  _gaq.push(removeUtms);
+
+  
+  (function(a, d) {
+    var ga = d.createElement(a); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == d.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = d.getElementsByTagName(a)[0]; s.parentNode.insertBefore(ga, s);
+  })('script', document);
+
+</script>
+  <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head>
+<body data-slug="Web/Guide" contextmenu="edit-history-menu" class="html-ltr document  ">
+
+  <script type="text/javascript">
+    (function(){
+  var FLAGS = {
+    'derby_closed': true,'ga_outbound_links': true,'kumaediting': true,'page_move': false,'promote_script': false,'search_doc_navigator': true,'top_contributors': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+      // This represents the site configuration
+  window.mdn = {
+    build: 'c4298c7',
+    // Properties and settings for CKEditor will go here
+    ckeditor: {},
+    // Feature test results and methods will be placed here
+    features: {},
+    // Ensures gettext always returns something, is always set
+    gettext: function(x) { return x; },
+    // The path to media (images, CSS, JS) in MDN
+    mediaPath: 'https://developer.cdn.mozilla.net/media/',
+    // Wiki-specific settings will be placed here
+    wiki: {
+      autosuggestTitleUrl: '/en-US/docs/get-documents'
+    }
+  };
+</script>
+  
+
+  
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+          <li><a href="#q" id="skip-search">Skip to search</a></li>
+      </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div class="clear header-login">
+      <a href="//www.mozilla.org/" id="tabzilla" class="no-track">mozilla</a>
+                <ul class="user-state">
+          <li><a href="/en-US/profiles/acidburn0zzz">acidburn0zzz</a></li>
+      <li><a href="/en-US/users/logout?next=/en-US/docs/Web/Guide">Sign out</a></li>
+  </ul>
+          </div>
+
+    <a href="/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="/en-US/docs/Zones">Zones<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-single" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="/en-US/Add-ons">Add-ons</a></li>
+              <li><a href="/en-US/docs/Apps">App Center</a></li>
+              <li><a href="/en-US/docs/Firefox">Firefox</a></li>
+              <li><a href="/en-US/Marketplace">Firefox Marketplace</a></li>
+              <li><a href="/en-US/docs/Firefox_OS">Firefox OS</a></li>
+              <li><a href="/en-US/docs/Persona">Persona</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="/en-US/docs/Web/API">APIs / DOM</a></li>
+              <li><a href="/en-US/Apps">Apps</a></li>
+              <li><a href="/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References & Guides</div>
+            <ul>
+              <li><a href="/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="/en-US/demos/">Demos</a></li>
+              <li><a href="/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/en-US/docs/Tools">Tools</a></li><li><a href="/en-US/demos/">Demos</a></li><li><a href="/en-US/docs/Mozilla/Connect">Connect</a></li><li class="main-nav-search"><form action="/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" data-placeholder="SEARCH" data-value="" value="" />
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+   <!-- end is_zone -->
+
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+            <div class="article-meta">
+        <!-- action buttons -->
+                  <ul class="page-buttons"><li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+
+        <div class="submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+                                                <li><bdi><a rel="internal" href="/ar/docs/Web/Guide" title="Web developer guide">عربي</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/bn-BD/docs/Web/Guide" title="ওয়েব ডেভেলপার গাইড">বাংলা (বাংলাদেশ)</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/de/docs/Web/Guide" title="Web developer guide">Deutsch</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/es/docs/Web/Guide" title="Guía de Desarrollo Web">Español</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/fa/docs/Web/Guide" title="Web developer guide">فارسی</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/fr/docs/Web/Guide" title="Guides pour Développeurs Web">Français</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/id/docs/Web/Guide" title="Web developer guide">Bahasa Indonesia</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/it/docs/Web/Guide" title="Web developer guide">Italiano</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/ja/docs/Web/Guide" title="Web developer guide">日本語</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/ko/docs/Web/Guide" title="Web developer guide">한국어</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/pl/docs/Web/Guide" title="Web developer guide">Polski</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/pt-BR/docs/Web/Guide" title="Web developer guide">Português (do Brasil)</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/ro/docs/Web/Guide" title="Web developer guide">română</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/ru/docs/Web/Guide" title="Web developer guide">Русский</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/th/docs/Web/Guide" title="Web developer guide">ไทย</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/zh-CN/docs/Web/Guide" title="Web 开发者指南">中文 (简体)</a></bdi></li>
+                                  <li><bdi><a rel="internal" href="/zh-TW/docs/Web/Guide" title="Web developer guide">正體中文 (繁體)</a></bdi></li>
+                              
+                              <li><a href="/en-US/docs/Web/Guide$locales">Add a translation</a></li>
+                          </ul>
+          </div>
+        </div></li><li class="page-buttons-edit"><a href="/en-US/docs/Web/Guide$edit" class="button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li><li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+
+        <div class="submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="/en-US/docs/Web/Guide$history">History</a></li>
+                                  <li class="page-watch">
+                                      <form action="/en-US/docs/Web/Guide$watch" method="post">
+                      <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='PPeeczzTlKaZ6pKs8Uhfl7kjeA0BYGqP' /></div>
+                      <a href="">Subscribe</a>
+                    </form>
+                                  </li>                                  <li><a href="/en-US/docs/new?parent=66107">New sub-page</a></li>
+                  <li><a href="/en-US/docs/new?clone=66107">Clone this page</a></li>
+                                                
+                
+                                
+                                                                <li class="page-print"><a href="#" onclick="return window.print();"  title="Print page">Print this page</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+          <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="/en-US" rel="v:url" property="v:title">MDN</a></li>
+          <li class="crumb" typeof="v:Breadcrumb"><a href="/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+        <li class="crumb" typeof="v:Breadcrumb" property="v:title">Web developer guide</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+                  <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+                  <h1>Web developer guide</h1>
+        
+          
+      </div>
+      
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-closed wiki-right-none wiki-left-closed wiki-left-none">
+
+          
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+                                                  
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+                                            
+              
+                                                                          
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                                                      <p>These articles provide how-to information to help you make use of specific technologies and APIs.</p>
+<div class="note">
+ <p><strong>Note:</strong> This page is going to be a mess for a little while until we finish migrating content. Our apologies!</p>
+</div>
+<div>
+ <div class="row topicpage-table"> 
+    <div class="section"><dl><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/CSS">CSS developer guide</a></dt><dd class="landingPageList">Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Events">Event developer guide</a></dt><dd class="landingPageList">Events refers both to a design pattern used for the asynchronous handling of various incidents which occur in the lifetime of a web page and to the naming, characterization, and use of a large number of incidents of different types.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Graphics">Graphics on the Web</a></dt><dd class="landingPageList">Modern Web sites and applications often need to present graphics.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/API">Guide to Web APIs</a></dt><dd class="landingPageList">Here you'll find links to each of the guides introducing and explaining each of the APIs that make up the Web development architecture.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/HTML">HTML developer guide</a></dt><dd class="landingPageList"><strong>HyperText Markup Language (HTML)</strong> is the core language of nearly all Web content. Most of what you see on screen in your browser is described, fundamentally, using HTML.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Mobile">Mobile Web Development</a></dt><dd class="landingPageList">This page provides an overview of some of the main techniques needed to design web sites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the <a href="/en/Mozilla/Firefox_OS" title="Boot to Gecko">Firefox OS</a> page. Or you might be interested in details about <a href="/en/Mozilla/Firefox_for_Android" title="Firefox for Android">Firefox for Android</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Needs_categorization">Needs categorization</a></dt><dd class="landingPageList">Pages located in this tree need to be moved into appropriate places in the Guide once we've finished cleaning things up.</dd></dl></div> 
+    <div class="section"><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Performance">Optimization and performance</a></dt><dd class="landingPageList">When building modern Web apps and sites, it's important to make your content perform well. That is, to make it work quickly and efficiently. This lets it work effectively both for users of powerful desktop systems as well as for handheld devices with less power.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/WOFF">The Web Open Font Format (WOFF)</a></dt><dd class="landingPageList"><strong>WOFF</strong> (the <strong>Web Open Font Format</strong>) is a new web font format developed by Mozilla in concert with Type Supply, LettError, and other organizations. It </dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/User_experience">User experience</a></dt><dd class="landingPageList">Making the user experience of your Web site or app a pleasant one for your users is important if you want users to come back and use it again and again. Here you'll find articles that may help you along.</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Using_FormData_Objects">Using FormData Objects</a></dt><dd class="landingPageList">The <a href="/en/DOM/XMLHttpRequest/FormData" title="en/DOM/XMLHttpRequest/FormData"><code>FormData</code></a> object lets you compile a set of key/value pairs to send using <code>XMLHttpRequest</code>. Its primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's <code>submit()</code> method would use to send the data if the form's encoding type were set to "multipart/form-data".</dd><dt class="landingPageList"><a href="/en-US/docs/Web/Guide/Terminology">Web terminology guide</a></dt><dd class="landingPageList">This guide to common Web terminology will help you understand the rest of the documentation here on MDN a little better.</dd></div> 
+    </div></div>
+<dl>
+ <dt>
+  <a href="/en-US/docs/JavaScript" title="/en-US/docs/JavaScript">JavaScript</a></dt>
+ <dd>
+  JavaScript is the powerful scripting language used to create applications for the Web.</dd>
+</dl>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en-US/docs/Web/Reference" title="/en-US/docs/Web/Reference">Web Developer Reference</a></li>
+</ul>
+                                                </article>
+
+              
+                <!-- attachments list -->
+                
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                                                      <!-- tags if present -->
+                  <div class="tag-attach-list tags contributor-sub">
+                    <i aria-hidden="true" class="icon-tags"></i><strong>Tags:</strong>
+                    <ul class="tag-list"><li><a href="/en-US/docs/tag/Guide">Guide</a></li><li><a href="/en-US/docs/tag/Web">Web</a></li><li><a href="/en-US/docs/tag/Landing">Landing</a></li></ul>
+                  </div>
+                                    <div class="contributor-sub"> <i aria-hidden="true" class="icon-group"></i><strong>Contributors to this page:</strong> <a href="/en-US/profiles/Sheppy">Sheppy</a>, <a href="/en-US/profiles/www_test">www_test</a>, <a href="/en-US/profiles/nicci.izzy">nicci.izzy</a>, <a href="/en-US/profiles/ethertank">ethertank</a>, <a href="/en-US/profiles/yash_bedi">yash_bedi</a>, <a href="/en-US/profiles/Onsteroids">Onsteroids</a> </div>                                      <div class="contributor-sub">
+                      <i aria-hidden="true" class="icon-time"></i><strong>Last updated by:</strong>
+                      <a href="/en-US/profiles/Onsteroids">Onsteroids</a>,
+                      <time datetime="2014-03-18T16:32:26-07:00">Mar 18, 2014 4:32:26 PM</time>
+                    </div>
+                                  </div>
+                          </div>
+
+                      </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="$edit" label="Edit page"></menuitem>
+    <menuitem data-action="$history" label="View page history"></menuitem>
+  </menu>
+  </div></main>
+
+  <!-- Footer -->
+  <footer><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+                <p>
+          <bdi>&copy; 2005-2014 Mozilla Developer Network and individual contributors<br /> Content is available under <a href="/en-US/docs/Project:MDN/About#Copyrights_and_licenses">these licenses</a> &middot; <a href="/en-US/docs/Project:MDN/About">About MDN</a> &middot; <a href="//github.com/mozilla/kuma">Contribute to the code</a> &middot; <a href="//www.mozilla.org/privacy/websites/">Privacy policy</a></bdi>        </p>
+              </div>
+      <div class="column-strip">
+                        <form class="languages go" method="get" action="/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option value="/en-US/docs/Web/Guide" selected>
+          English (US)
+        </option>
+                  <option value="/ar/docs/Web/Guide">
+            عربي
+          </option>          <option value="/bn-BD/docs/Web/Guide">
+            বাংলা (বাংলাদেশ)
+          </option>          <option value="/de/docs/Web/Guide">
+            Deutsch
+          </option>          <option value="/es/docs/Web/Guide">
+            Español
+          </option>          <option value="/fa/docs/Web/Guide">
+            فارسی
+          </option>          <option value="/fr/docs/Web/Guide">
+            Français
+          </option>          <option value="/id/docs/Web/Guide">
+            Bahasa Indonesia
+          </option>          <option value="/it/docs/Web/Guide">
+            Italiano
+          </option>          <option value="/ja/docs/Web/Guide">
+            日本語
+          </option>          <option value="/ko/docs/Web/Guide">
+            한국어
+          </option>          <option value="/pl/docs/Web/Guide">
+            Polski
+          </option>          <option value="/pt-BR/docs/Web/Guide">
+            Português (do Brasil)
+          </option>          <option value="/ro/docs/Web/Guide">
+            română
+          </option>          <option value="/ru/docs/Web/Guide">
+            Русский
+          </option>          <option value="/th/docs/Web/Guide">
+            ไทย
+          </option>          <option value="/zh-CN/docs/Web/Guide">
+            中文 (简体)
+          </option>          <option value="/zh-TW/docs/Web/Guide">
+            正體中文 (繁體)
+          </option>      </select>
+      <noscript><button type="submit">Go</button></noscript>
+    </form>
+                </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+    <script src="/en-US/jsi18n/build:c4298c7"></script>
+    <script src="//mozorg.cdn.mozilla.net/en-US/tabzilla/tabzilla.js" async></script>
+
+      <!--[if lte IE 8]><script src="/media/redesign/js/libs/selectivizr-1.0.2/selectivizr-build.js?build=c4298c7"></script><![endif]-->
+
+    <script src="https://developer.cdn.mozilla.net/media/js/main-min.js?build=c4298c7"></script>
+
+          <script>
+        mdn.analytics.trackOutboundLinks(document.body);
+      </script>
+    
+          <script src="https://developer.cdn.mozilla.net/media/js/wiki-min.js?build=c4298c7"></script>
+      
+      <script type="text/javascript">
+    (function($) {
+      $('.from-search-toc').mozSearchResults('');
+    })(jQuery);
+  </script>
+  
+  <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-3.newrelic.com","42869b6ed3","3172075","b1QHMUtVDRdSW0YKXVYeIxBXVxcNXFYdFFtTWEsTUFEUFwlcXQBHVVQLEQ==",0,393,new Date().getTime(),"","","","",""]);</script></body>
+</html>
