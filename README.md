@@ -1,6 +1,8 @@
 sso
 ===
 
+[![Join the chat at https://gitter.im/Acidburn0zzz/sso](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Acidburn0zzz/sso?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Sigle sign-on
 
 Identification_Information:
